@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title中考倒计时title>
+        <style>
+            input {
+                width: 40px;
+                height: 20px;
+            }
+            #remainTime{
+                background-color: yellow;
+                margin-top: 30px;
+                font-size: 40px;
+                text-align: center;
+
+            }
+            #remainTime span {
+                color: red;
+                font-weight: bold;
+                margin-right: 10px;
+            }
+        </style>
+</head>
+<body>
+    <div id="remainTime">
+        距离语文开考还有：
+        <span id="one"></span>天
+        <span id="two"></span>时
+        <span id="three"></span>分
+        <span id="four"></span>秒
+    </div>
+</body>
+<script>
+        (function show() {      
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 6
+            var oDay = 17
+            var oHour = 9
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;          
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('one').innerHTML = day;
+                document.getElementById('two').innerHTML = hour;
+                document.getElementById('three').innerHTML = minute;
+                document.getElementById('four').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }  
+        })()
+        //格式化日期格式 2
+        function dateFormat(data){
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+  </script>
+
+
+
+
+
+
+<body>
+    <div id="remainTime">
+        距离理综开考还有：
+        <span id="1"></span>天
+        <span id="2"></span>时
+        <span id="3"></span>分
+        <span id="4"></span>秒
+    </div>
+</body>
+<script>
+        (function show() {      
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 6
+            var oDay = 17
+            var oHour = 14
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;          
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('1').innerHTML = day;
+                document.getElementById('2').innerHTML = hour;
+                document.getElementById('3').innerHTML = minute;
+                document.getElementById('4').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }  
+        })()
+        //格式化日期格式 2
+        function dateFormat(data){
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+  </script>
+
+
+
+
+
+
+
+
+<body>
+    <div id="remainTime">
+        距离外语开考还有：
+        <span id="o"></span>天
+        <span id="t"></span>时
+        <span id="t3"></span>分
+        <span id="f"></span>秒
+    </div>
+</body>
+<script>
+        (function show() {      
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 6
+            var oDay = 18
+            var oHour = 9
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;          
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('o').innerHTML = day;
+                document.getElementById('t').innerHTML = hour;
+                document.getElementById('t3').innerHTML = minute;
+                document.getElementById('f').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }  
+        })()
+        //格式化日期格式 2
+        function dateFormat(data){
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+  </script>
+
+
+
+
+
+
+
+
+
+
+<body>
+    <div id="remainTime">
+        距离数学开考还有：
+        <span id="e"></span>天
+        <span id="o"></span>时
+        <span id="ee"></span>分
+        <span id="r"></span>秒
+    </div>
+</body>
+<script>
+        (function show() {      
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 6
+            var oDay = 18
+            var oHour = 14
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;          
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('e').innerHTML = day;
+                document.getElementById('o').innerHTML = hour;
+                document.getElementById('ee').innerHTML = minute;
+                document.getElementById('r').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }  
+        })()
+        //格式化日期格式 2
+        function dateFormat(data){
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+    <div id="remainTime">
+        距离道法开考还有：
+        <span id="n"></span>天
+        <span id="w"></span>时
+        <span id="h"></span>分
+        <span id="u"></span>秒
+    </div>
+</body>
+<script>
+        (function show() {      
+            //1.设置目的时间
+            var oYear = 2023
+            var oMonth = 6
+            var oDay = 19
+            var oHour = 9
+            var oMinute = 0
+            var oSecond = 0
+            var funtureDate = new Date(oYear, oMonth, oDay, oHour, oMinute, oSecond);
+            // console.log(dateFormat(funtureDate))
+            //2.设置定时器
+            setInterval(function () {
+                //3.获取现在的时间
+                var presentDate = new Date();
+                //4.获取时间戳
+                var funtureTime = funtureDate.getTime();
+                var presenTime = presentDate.getTime();
+                //5.获取剩余的时间戳
+                var allTime = funtureTime - presenTime;          
+                //6.把毫秒转换为秒
+                var allSecond = parseInt(allTime / 1000);
+                //7.获取剩余多少天
+                var day = size(parseInt(allSecond / 3600 / 24));
+                //8.获取剩余多少小时
+                var hour = size(parseInt(allSecond / 3600 % 24));
+                //9.获取剩余多少分钟
+                var minute = size(parseInt(allSecond / 60 % 60));
+                //10.获取剩余多少秒
+                var second = size(parseInt(allSecond % 60));
+                //11.注入：
+                document.getElementById('n').innerHTML = day;
+                document.getElementById('w').innerHTML = hour;
+                document.getElementById('h').innerHTML = minute;
+                document.getElementById('u').innerHTML = second;
+            }, 1000);
+            //如果数>=10,则在前面补0
+            function size(num) {
+                return num < 10 & num >= 0 ? '0' + num : num;
+            }  
+        })()
+        //格式化日期格式 2
+        function dateFormat(data){
+            var date = new Date(data);
+            var YY = date.getFullYear() + '-';
+            var MM = (date.getMonth() + 1 < 10 ? '0' + (date.getMonth() + 1) : date.getMonth() + 1) + '-';
+            var DD = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate());
+            return YY + MM + DD;
+        }
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>
