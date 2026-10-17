@@ -1,0 +1,90 @@
+{
+  "src": "C:\\Users\\shen_\\Doubao\\chats\\2026-10-17\\new-chat-1\\nailong-redirect\\_preview_tmp.html",
+  "url": "file:///C:/Users/shen_/Doubao/chats/2026-10-17/new-chat-1/nailong-redirect/_preview_tmp.html",
+  "outdir": "C:\\Users\\shen_\\Doubao\\chats\\2026-10-17\\new-chat-1\\nailong-redirect\\_shots",
+  "include": [
+    "lint",
+    "screenshots",
+    "structure"
+  ],
+  "shots": {
+    "mobile": {
+      "screenshot": "C:\\Users\\shen_\\Doubao\\chats\\2026-10-17\\new-chat-1\\nailong-redirect\\_shots\\_preview_tmp_mobile.jpg",
+      "screenshotBytes": 33161,
+      "truncated": false,
+      "structure": {
+        "title": "欢迎访问上海奶龙师范大学官网",
+        "firstH1": "欢迎访问上海奶龙师范大学官网",
+        "viewport": {
+          "w": 492,
+          "h": 702
+        },
+        "fullpage": {
+          "w": 492,
+          "h": 750
+        },
+        "counts": {
+          "section": 0,
+          "h1": 1,
+          "h2": 0,
+          "img": 1,
+          "canvas": 0,
+          "svg": 1,
+          "links": 2,
+          "buttons": 1
+        }
+      },
+      "consoleErrors": [],
+      "consoleWarnings": [],
+      "horizontalOverflow": [],
+      "resourceErrors": [],
+      "reportSource": "cdp"
+    }
+  },
+  "engine": "chrome_cli",
+  "chromiumExec": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "engineDegraded": true,
+  "engineDegradedReason": "playwright 未装",
+  "elapsedSec": 4.3,
+  "schemaVersion": 2,
+  "status": "pass",
+  "engineInfo": {
+    "name": "chrome_cli",
+    "degraded": true,
+    "degradedReasons": [
+      "playwright 未装"
+    ]
+  },
+  "input": {
+    "original": "C:\\Users\\shen_\\Doubao\\chats\\2026-10-17\\new-chat-1\\nailong-redirect\\_preview_tmp.html",
+    "resolvedPath": "C:\\Users\\shen_\\Doubao\\chats\\2026-10-17\\new-chat-1\\nailong-redirect\\_preview_tmp.html",
+    "baseUrl": "file:///C:/Users/shen_/Doubao/chats/2026-10-17/new-chat-1/nailong-redirect/_preview_tmp.html",
+    "protocol": "file",
+    "cwd": "C:\\Users\\shen_\\Doubao\\chats\\2026-10-17\\new-chat-1",
+    "mediaMode": {
+      "reducedMotion": true
+    }
+  },
+  "artifacts": {
+    "screenshots": [
+      {
+        "viewport": "mobile",
+        "path": "C:\\Users\\shen_\\Doubao\\chats\\2026-10-17\\new-chat-1\\nailong-redirect\\_shots\\_preview_tmp_mobile.jpg",
+        "size": 33161,
+        "visualCoverage": {
+          "complete": true,
+          "reason": null
+        }
+      }
+    ]
+  },
+  "summary": {
+    "blocker": 0,
+    "error": 0,
+    "warning": 0,
+    "info": 0
+  },
+  "findings": [],
+  "prioritizedActions": [],
+  "reportPath": "C:\\Users\\shen_\\Doubao\\chats\\2026-10-17\\new-chat-1\\nailong-redirect\\_shots\\report.json"
+}
