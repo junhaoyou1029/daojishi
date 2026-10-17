@@ -1,7 +1,264 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<meta http-equiv="refresh" content="0; url=https://www.shnu.edu.cn/">
-</head>
-</html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>欢迎访问上海奶龙师范大学官网</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='36' r='24' fill='%23FFC93C'/%3E%3Cpath d='M32 6 L38 18 L26 18 Z' fill='%23FFC93C'/%3E%3Ccircle cx='24' cy='34' r='3.4' fill='%2333220A'/%3E%3Ccircle cx='40' cy='34' r='3.4' fill='%2333220A'/%3E%3Cpath d='M25 43 Q32 49 39 43' stroke='%2333220A' stroke-width='3' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="https://miaoda.feishu.cn/fonts/css2?family=ZCOOL+KuaiLe&family=Noto+Sans+SC:wght@400;500;700&display=swap">
+<style>
+  :root{
+    --yellow:#FFC93C;
+    --yellow-deep:#F5A623;
+    --cream:#FFF8E7;
+    --ink:#4A3500;
+    --ink-soft:#8A6D1F;
+    --white:#FFFDF7;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{height:100%;}
+  body{
+    font-family:"Noto Sans SC","PingFang SC","Microsoft YaHei",sans-serif;
+    background:linear-gradient(170deg,#FFE9A8 0%,#FFF8E7 55%,#FFEFB8 100%);
+    color:var(--ink);
+    min-height:100%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+    overflow:hidden;
+    position:relative;
+  }
+  /* 背景装饰圆点 */
+  .dot{position:absolute;border-radius:50%;background:#FFD966;opacity:.35;pointer-events:none;}
+  .dot.d1{width:140px;height:140px;top:-40px;left:-40px;}
+  .dot.d2{width:90px;height:90px;bottom:6%;right:4%;opacity:.28;}
+  .dot.d3{width:50px;height:50px;top:12%;right:10%;opacity:.3;}
+  .dot.d4{width:70px;height:70px;bottom:14%;left:6%;opacity:.25;}
 
+  .card{
+    position:relative;
+    background:var(--white);
+    border:4px solid var(--yellow);
+    border-radius:36px;
+    box-shadow:0 18px 50px rgba(214,158,26,.28);
+    max-width:560px;
+    width:100%;
+    padding:40px 36px 38px;
+    text-align:center;
+    z-index:1;
+  }
+  .badge{
+    display:inline-block;
+    background:var(--yellow);
+    color:#5C3F00;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:2px;
+    padding:6px 18px;
+    border-radius:999px;
+    margin-bottom:18px;
+  }
+  .dragon-box{
+    width:236px;height:236px;
+    margin:0 auto 2px;
+    animation:bob 2.4s ease-in-out infinite;
+    filter:drop-shadow(0 12px 14px rgba(214,158,26,.25));
+  }
+  .dragon{
+    width:100%;height:100%;
+    object-fit:contain;
+    display:block;
+  }
+  @keyframes bob{
+    0%,100%{transform:translateY(0) rotate(-1.5deg);}
+    50%{transform:translateY(-14px) rotate(1.5deg);}
+  }
+  h1{
+    font-family:"ZCOOL KuaiLe","Noto Sans SC",sans-serif;
+    font-size:32px;
+    line-height:1.35;
+    color:var(--ink);
+    margin:10px 0 8px;
+    letter-spacing:1px;
+  }
+  h1 .hl{color:var(--yellow-deep);}
+  .sub{
+    color:var(--ink-soft);
+    font-size:15px;
+    margin-bottom:26px;
+  }
+  .sub a{color:var(--yellow-deep);font-weight:700;text-decoration:none;}
+  .sub a:hover{text-decoration:underline;}
+
+  /* 倒计时 */
+  .count-wrap{display:flex;justify-content:center;margin:4px 0 24px;}
+  .ring{position:relative;width:120px;height:120px;}
+  .ring svg{transform:rotate(-90deg);}
+  .ring .track{fill:none;stroke:#FBE7B3;stroke-width:9;}
+  .ring .prog{
+    fill:none;stroke:var(--yellow-deep);stroke-width:9;stroke-linecap:round;
+    stroke-dasharray:339.3;stroke-dashoffset:0;
+    transition:stroke-dashoffset 3s linear;
+  }
+  .num{
+    position:absolute;inset:0;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;
+    line-height:1;
+  }
+  .num b{
+    font-family:"ZCOOL KuaiLe",sans-serif;
+    font-size:52px;color:var(--yellow-deep);
+  }
+  .num b.pop{animation:pop .5s ease;}
+  @keyframes pop{
+    0%{transform:scale(.4);opacity:0;}
+    60%{transform:scale(1.15);}
+    100%{transform:scale(1);opacity:1;}
+  }
+  .num span{font-size:12px;color:var(--ink-soft);margin-top:5px;letter-spacing:2px;}
+
+  .tips{
+    font-size:15px;color:var(--ink);
+    margin-bottom:22px;min-height:22px;
+  }
+  .tips strong{color:var(--yellow-deep);font-size:19px;font-family:"ZCOOL KuaiLe",sans-serif;}
+  .btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;
+    min-height:46px;padding:0 26px;
+    border-radius:999px;font-size:15px;font-weight:700;
+    cursor:pointer;text-decoration:none;
+    border:3px solid transparent;
+    transition:transform .15s ease,box-shadow .15s ease;
+    font-family:inherit;
+  }
+  .btn-primary{
+    background:var(--yellow);color:#5C3F00;
+    box-shadow:0 6px 0 #E0A421;
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 0 #E0A421;}
+  .btn-primary:active{transform:translateY(3px);box-shadow:0 3px 0 #E0A421;}
+  .btn-ghost{
+    background:transparent;color:var(--ink-soft);
+    border-color:#EBD189;
+  }
+  .btn-ghost:hover{background:#FFF3D0;}
+  .footer{
+    margin-top:24px;font-size:12px;color:#B89B4F;letter-spacing:1px;
+  }
+  @media (max-width:480px){
+    body{align-items:flex-start;padding:14px;}
+    .card{padding:24px 18px 24px;border-radius:28px;}
+    .dragon-box{width:172px;height:172px;}
+    .badge{margin-bottom:12px;}
+    h1{font-size:25px;margin-top:6px;}
+    .sub{margin-bottom:18px;}
+    .count-wrap{margin-bottom:18px;}
+    .ring{width:108px;height:108px;}
+    .ring svg{width:108px;height:108px;}
+    .tips{margin-bottom:18px;}
+    .footer{margin-top:18px;}
+  }
+  @media (prefers-reduced-motion:reduce){
+    .dragon-box{animation:none;}
+    .ring .prog{transition:none;}
+  }
+</style>
+</head>
+<body>
+  <span class="dot d1" aria-hidden="true"></span>
+  <span class="dot d2" aria-hidden="true"></span>
+  <span class="dot d3" aria-hidden="true"></span>
+  <span class="dot d4" aria-hidden="true"></span>
+
+  <main class="card">
+    <span class="badge">SHNAILONG U</span>
+    <div class="dragon-box">
+      <img class="dragon" src="assets/nailong.png" alt="奶龙风格的黄色呆萌小恐龙">
+    </div>
+    <h1>欢迎访问<span class="hl">上海奶龙师范大学</span>官网</h1>
+    <p class="sub">本站为趣味跳转页，即将前往 <a href="https://www.shnu.edu.cn" target="_blank" rel="noopener">上海师范大学</a> 官方网站</p>
+
+    <div class="count-wrap" aria-live="polite">
+      <div class="ring">
+        <svg width="120" height="120" viewBox="0 0 120 120">
+          <circle class="track" cx="60" cy="60" r="54"></circle>
+          <circle class="prog" id="prog" cx="60" cy="60" r="54"></circle>
+        </svg>
+        <div class="num">
+          <b id="num">3</b>
+          <span>秒后跳转</span>
+        </div>
+      </div>
+    </div>
+
+    <p class="tips" id="tips">页面将在 <strong id="sec">3</strong> 秒后自动跳转</p>
+
+    <div class="btns">
+      <a class="btn btn-primary" href="https://www.shnu.edu.cn">立即前往</a>
+      <button class="btn btn-ghost" id="cancelBtn" type="button">取消自动跳转</button>
+    </div>
+
+    <p class="footer">奶龙师大 · 幽默企划 · 非真实院校</p>
+  </main>
+
+<script>
+(function(){
+  var TARGET = "https://www.shnu.edu.cn";
+  var TOTAL = 3;
+  var remain = TOTAL;
+  var cancelled = false;
+  var numEl = document.getElementById("num");
+  var secEl = document.getElementById("sec");
+  var tipsEl = document.getElementById("tips");
+  var progEl = document.getElementById("prog");
+  var cancelBtn = document.getElementById("cancelBtn");
+  var LENGTH = 2 * Math.PI * 54; // 圆环周长
+  progEl.style.strokeDasharray = LENGTH;
+  progEl.style.strokeDashoffset = 0;
+
+  function popNum(){
+    numEl.classList.remove("pop");
+    void numEl.offsetWidth; // 重启动画
+    numEl.classList.add("pop");
+  }
+
+  // 首帧后启动进度环（3秒走完一圈）
+  setTimeout(function(){
+    if(!cancelled){ progEl.style.strokeDashoffset = LENGTH; }
+  }, 30);
+
+  var timer = setInterval(function(){
+    remain--;
+    if(remain > 0){
+      numEl.textContent = remain;
+      secEl.textContent = remain;
+      popNum();
+    }else{
+      clearInterval(timer);
+      numEl.textContent = 0;
+      tipsEl.innerHTML = "正在跳转，请稍候……";
+      window.location.href = TARGET;
+    }
+  }, 1000);
+
+  cancelBtn.addEventListener("click", function(){
+    if(!cancelled){
+      // 取消自动跳转
+      cancelled = true;
+      clearInterval(timer);
+      progEl.style.transition = "none";
+      progEl.style.strokeDashoffset = LENGTH; // 进度环停住
+      numEl.textContent = "—";
+      tipsEl.innerHTML = '已取消自动跳转，可点击 <a href="' + TARGET + '" style="color:#F5A623;font-weight:700;">「立即前往」</a> 手动访问';
+      cancelBtn.textContent = "恢复自动跳转";
+    }else{
+      // 恢复：重新从 3 秒开始
+      location.reload();
+    }
+  });
+})();
+</script>
+</body>
+</html>
